@@ -9,8 +9,9 @@ S.forEach(function(s,i){var li=document.createElement("li");li.innerHTML="<b>"+s
 function show(){var c=$("chips");c.innerHTML="";A[cur].v.forEach(function(x,i){var s=document.createElement("span"),p=x.split(":");s.className="chip"+(i?"":" "+p[0]);s.textContent=i?x:p[1];c.appendChild(s)});$("vtext").textContent=A[cur].t;vd.classList.add("on")}
 function audit(a){log.textContent=new Date().toLocaleTimeString()+" · audit: proposal "+a+" by analyst. Nothing executed (demo)."}
 $("ok").onclick=function(){audit("approved")};$("no").onclick=function(){audit("rejected")};
-var pv=$("pv");[].forEach.call(document.querySelectorAll("#wk .row"),function(r){r.addEventListener("mouseenter",function(){pv.innerHTML="<b>"+r.dataset.t+"</b>"+r.dataset.m.split("|").map(function(x){return"<div>• "+x+"</div>"}).join("");pv.classList.add("on")});r.addEventListener("mouseleave",function(){pv.classList.remove("on")})});
-$("wk").addEventListener("mousemove",function(e){pv.style.left=Math.min(e.clientX+24,innerWidth-310)+"px";pv.style.top=Math.min(e.clientY+16,innerHeight-190)+"px"});
+var ww=$("ww"),tint=function(r){ww.style.backgroundColor=r.dataset.bg;ww.classList.add("on")},untint=function(){ww.style.backgroundColor="";ww.classList.remove("on")};
+[].forEach.call(document.querySelectorAll("#wk .row"),function(r){r.addEventListener("mouseenter",function(){tint(r)});r.addEventListener("focus",function(){tint(r)});r.addEventListener("blur",untint)});
+$("wk").addEventListener("mouseleave",untint);
 var gt=$("gt");gt.addEventListener("click",function(){var g=$("fg"),o=g.classList.toggle("open");gt.innerHTML=o?"Close":"Get in<br>touch";if(o)setTimeout(function(){g.scrollIntoView({behavior:"smooth",block:"start"})},50)});
 /* Paste your Formspree URL here, e.g. "https://formspree.io/f/xxxxxxx". Leave empty to fall back to a mailto link. */
 var FORM="";
