@@ -26,33 +26,45 @@
 <div class="stat"><b>1942</b><span>LeetCode Knight, top 3.42% globally</span></div>
 <div class="stat"><b>1000+</b><span>problems solved</span></div>
 <div class="stat"><b>90.4%</b><span>QueryClarify execution accuracy</span></div>
-<div class="stat"><b>80.2%</b><span>CodeAtlas risk model ROC-AUC</span></div>
+<div class="stat"><b>10K+</b><span>CyberSight alerts triaged per hour</span></div>
 </div>
 </section>
 
 <section id="demo">
 <div class="kick mono">01 / headline project</div>
-<h2>Alert Triage Agents <span class="tag mono">working title</span></h2>
+<h2>CyberSight <span class="tag mono">Distributed multi-agent SOC triage</span></h2>
 <p class="lead">Security teams drown in network alerts, and most are false alarms. A team of LangGraph agents decides what is real, what kind, how severe, and what a human should do next. The system only proposes actions; a person approves, and every decision is audit-logged. Pick a sample alert and watch the run (illustrative replay, no live traffic).</p>
+<div class="actions" style="margin-bottom:24px"><a class="btn p" href="https://cybersight-nine.vercel.app/" target="_blank" rel="noopener">Open live platform ↗</a> <a class="btn" href="https://github.com/Lakshya-18-web/cybersight" target="_blank" rel="noopener">GitHub repo ↗</a></div>
 <div class="card demo">
 <div class="picks" id="picks"></div>
 <ol class="steps mono" id="steps"></ol>
 <div class="verdict" id="verdict"><div class="chips" id="chips"></div><div id="vtext"></div><div><button class="btn p" id="ok">Approve</button> <button class="btn" id="no">Reject</button></div></div>
 <div class="log mono" id="log"></div>
 </div>
-<p class="log mono" style="margin-top:10px">XGBoost detector on CIC-IDS2017 · LangGraph supervisor with traffic, beaconing and enrichment agents · Gemini verdict · ChromaDB incident memory · policy layer that can only make the model more cautious. Evaluation metrics to be added.</p>
+<div class="stats">
+<div class="stat"><b>10K+</b><span>alerts triaged per hour, p95 under 8 s</span></div>
+<div class="stat"><b>97% / 94%</b><span>precision / recall on a frozen 2,500-alert holdout</span></div>
+<div class="stat"><b>85%</b><span>fewer false positives than a single-LLM baseline</span></div>
+<div class="stat"><b>40%</b><span>lower cost per alert</span></div>
+<div class="stat"><b>0</b><span>true attacks auto-closed</span></div>
+<div class="stat"><b>99.9%</b><span>job durability</span></div>
+<div class="stat"><b>2,000+</b><span>tests at 90% coverage in CI</span></div>
+<div class="stat"><b>99.5%</b><span>uptime over 30 days at 200 req/s</span></div>
+</div>
+<p class="log mono" style="margin-top:20px">Python · FastAPI · LangGraph (supervisor, 3 specialist agents, 9 tools) · PostgreSQL · Redis · Celery · Docker · OpenTelemetry · Prometheus · CI/CD. Hardened with Argon2id, CSRF protection and RBAC; 0 bypasses across a 50-payload prompt-injection suite. Evaluated over 3 runs with 95% CIs.</p>
 </section>
 
+<div class="ww" id="ww">
 <section id="work">
 <div class="kick mono">02 / recent work</div>
 <div class="work" id="wk">
-<a class="row" href="#demo" data-t="Alert Triage Agents" data-m="LangGraph multi-agent triage|XGBoost on CIC-IDS2017|Human approval and audit log|Prompt-injection defences"><h3>Alert Triage</h3><span class="c">Agentic AI &amp; Security</span><span class="meta">LangGraph agents · XGBoost on CIC-IDS2017 · human approval · audit log</span></a>
-<a class="row" href="https://query-clarify.vercel.app/" target="_blank" rel="noopener" data-t="QueryClarify" data-m="90.4% execution accuracy on 594 queries|+4.9pp over non-RAG baseline|92% ambiguity detection|60/60 adversarial cases blocked"><h3>QueryClarify</h3><span class="c">Agentic RAG &amp; Text-to-SQL</span><span class="meta">90.4% execution accuracy across 157 databases · 60/60 adversarial blocked</span></a>
-<a class="row" href="https://code-atlas-goal-grid.vercel.app/" target="_blank" rel="noopener" data-t="CodeAtlas" data-m="Code map: 4,500+ files, 23,000+ nodes|Bug-risk model: 80.2% ROC-AUC|Graph-aware RAG: +6.1pp relevance|Static security checks, 20+ patterns"><h3>CodeAtlas</h3><span class="c">Codebase Intelligence</span><span class="meta">Code map to 23,000+ nodes · 80.2% ROC-AUC risk model · graph-aware RAG</span></a>
-<a class="row" href="https://cupcast-fifa-2026.vercel.app/" target="_blank" rel="noopener" data-t="CupCast" data-m="XGBoost 68.94% accuracy, +8pp vs Elo|Brier score 0.188|10,000 Monte Carlo simulations|Backtested on 2018 and 2022"><h3>CupCast</h3><span class="c">Predictive ML &amp; Simulation</span><span class="meta">68.94% accuracy · Brier 0.188 · 10,000 simulations backtested</span></a>
+<a class="row" href="https://cybersight-nine.vercel.app/" target="_blank" rel="noopener" data-bg="#17303d"><h3>CyberSight</h3><span class="c">Multi-Agent SOC Triage</span><span class="meta">10K+ alerts/hour at p95 under 8 s · 97% precision, 94% recall · 85% fewer false positives · 40% lower cost per alert · 0 true attacks auto-closed</span></a>
+<a class="row" href="https://query-clarify.vercel.app/" target="_blank" rel="noopener" data-bg="#1b3327"><h3>QueryClarify</h3><span class="c">Agentic RAG &amp; Text-to-SQL</span><span class="meta">90.4% execution accuracy on 594 queries · +4.9pp over non-RAG baseline · 92% ambiguity detection · 60/60 adversarial cases blocked</span></a>
+<a class="row" href="https://code-atlas-goal-grid.vercel.app/" target="_blank" rel="noopener" data-bg="#3a2f16"><h3>CodeAtlas</h3><span class="c">Codebase Intelligence</span><span class="meta">Code map to 4,500+ files and 23,000+ nodes · 80.2% ROC-AUC risk model · +6.1pp from graph-aware RAG</span></a>
+<a class="row" href="https://cupcast-fifa-2026.vercel.app/" target="_blank" rel="noopener" data-bg="#3d1f1a"><h3>CupCast</h3><span class="c">Predictive ML &amp; Simulation</span><span class="meta">68.94% accuracy, +8pp over Elo · Brier 0.188 · 10,000 Monte Carlo simulations backtested on 2018 and 2022</span></a>
 </div>
 </section>
-<div id="pv" class="mono"></div>
+</div>
 
 <section id="coding">
 <div class="kick mono">03 / coding profiles</div>
@@ -68,9 +80,9 @@
 <section id="about">
 <div class="kick mono">04 / about</div>
 <div class="cols">
-<div class="card"><h2 style="font-size:20px">Cybersecurity Intern, CERT-In</h2><div class="stk mono">Dec 2025 – Jan 2026 · New Delhi</div>
+<div class="card"><h2 style="font-size:28px">Cybersecurity Intern, CERT-In</h2><div class="stk mono">Dec 2025 – Jan 2026 · New Delhi</div>
 <ul><li>Analysed network traffic with Zeek logs to identify APT29 patterns via DNS behaviour and connection features.</li><li>Feature engineering and correlation analysis to detect C2 communication and possible data exfiltration.</li><li>Compared SCRANTON and NASHUA datasets to separate malicious from benign traffic.</li></ul></div>
-<div class="card skills"><h2 style="font-size:20px">Toolbox</h2>
+<div class="card skills"><h2 style="font-size:28px">Toolbox</h2>
 <p><b>Languages:</b> C++, Python, JavaScript, SQL</p><p><b>AI / GenAI:</b> LangGraph, RAG, Gemini, Groq, ChromaDB, RAGAS, LangSmith</p><p><b>ML:</b> Scikit-learn, XGBoost, calibration, Pandas, NumPy</p><p><b>Backend &amp; web:</b> FastAPI, Flask, React, Vite, Tailwind, MySQL</p><p><b>Core:</b> DSA, OOP, OS, DBMS, Networks</p></div>
 </div>
 </section>
